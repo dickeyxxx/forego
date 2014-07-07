@@ -12,6 +12,8 @@ var commands = []*Command{
 	cmdHelp,
 }
 
+var version string = "dev"
+
 func main() {
 	args := os.Args[1:]
 	if len(args) < 1 {

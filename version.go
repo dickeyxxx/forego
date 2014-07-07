@@ -4,10 +4,6 @@ import (
 	"fmt"
 )
 
-const (
-	Version = "dev"
-)
-
 var cmdVersion = &Command{
 	Run:   runVersion,
 	Usage: "version",
@@ -25,5 +21,5 @@ func init() {
 }
 
 func runVersion(cmd *Command, args []string) {
-	fmt.Println(Version)
+	fmt.Println(version)
 }

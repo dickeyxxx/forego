@@ -1,5 +1,6 @@
 BIN = forego
 SRC = $(shell ls *.go)
+VERSION = dev
 
 all: build
 
@@ -15,4 +16,5 @@ lint: $(SRC)
 	go fmt
 
 $(BIN): $(SRC)
-	godep go build -o $@
+	godep get
+	godep go build -o $@ -ldflags "-X main.version ${VERSION}"
