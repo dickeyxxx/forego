@@ -17,4 +17,4 @@ lint: $(SRC)
 
 $(BIN): $(SRC)
 	godep get
-	godep go build -o $@ -ldflags "-X main.version ${VERSION}"
+	godep go build -ldflags "-X main.Version ${VERSION}" -o $@

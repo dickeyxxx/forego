@@ -21,5 +21,5 @@ func init() {
 }
 
 func runVersion(cmd *Command, args []string) {
-	fmt.Println(version)
+	fmt.Println(Version)
 }

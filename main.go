@@ -12,7 +12,7 @@ var commands = []*Command{
 	cmdHelp,
 }
 
-var version string
+var Version string = "dev"
 
 func main() {
 	args := os.Args[1:]
