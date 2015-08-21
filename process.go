@@ -16,6 +16,7 @@ type Process struct {
 
 func NewProcess(workdir, command string, env Env, interactive bool) (p *Process) {
 	argv := ShellInvocationCommand(interactive, workdir, command)
+	argv = append(argv, "2>&1")
 	return &Process{
 		command, env, interactive, exec.Command(argv[0], argv[1:]...),
 	}
