@@ -5,21 +5,14 @@ import "os"
 var commands = []*Command{
 	cmdStart,
 	cmdRun,
-	cmdUpdate,
 	cmdVersion,
 	cmdHelp,
 }
-
-var allowUpdate string = "true"
 
 func main() {
 	args := os.Args[1:]
 	if len(args) < 1 {
 		usage()
-	}
-
-	if allowUpdate == "false" {
-		cmdUpdate.Disabled = true
 	}
 
 	for _, cmd := range commands {
